@@ -4,6 +4,7 @@
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url('https://fonts.googleapis.com/css2?family=Imprima&family=Lato:ital,wght@1,300&display=swap');
 
 .footer{
     grid-area: footer;
@@ -46,6 +47,8 @@
     text-align: center;
     padding-left: 15%;
     padding-right: 15%;
+    font-family: 'Imprima', sans-serif;
+    font-family: 'Lato', sans-serif;
  }
 .acomodar{
     display: flex;
@@ -139,6 +142,8 @@ h1{
   text-align: center;
   padding-left: 20%;
   padding-right: 20%;
+  font-family: 'Imprima', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .main_historia h2{
@@ -149,6 +154,8 @@ h1{
 .main_historia ul{
   padding-left: 20%;
   text-decoration: none;
+  font-family: 'Imprima', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .main_historia div{
