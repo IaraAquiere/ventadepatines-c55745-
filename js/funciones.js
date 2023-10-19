@@ -67,14 +67,26 @@ const renderCarrito = () => {
 
         contenidoHTML += `<tr>
         <td>&nbsp;</td>
-        <td>Total</td>
+        <td></td>
+        <td></td>
+        <td><b>Total</b></td>
         <td><b>$${sumaProductosCarrito()}</b></td>
-        <td>&nbsp;</td>
         </tr>
-        </table>`;
+        </table>
+        <a class="btn btn-primary">Finalizar Compra</a>`;
+
     } else {
         contenidoHTML = `<div class="alert alert-danger my-5 text-center" role="alert">Su carrito esta vacio!</div>`;
     }
+
+    contenidoHTML += `<div class="card text-bg-success mb-3" style="max-width: 18rem;margin-top:10px;">
+    <div class="card-header">Cotizacion Dolar Blue</div>
+    <div class="card-body">
+      <p id="cotiz" class="card-text">$0</p>
+    </div>
+  </div>`;
+
+    TraerCotizacionDolar();
 
     document.getElementById("contenido").innerHTML = contenidoHTML;
 }
@@ -109,7 +121,6 @@ const agregarProductoCarrito = (id) => {
         icon: 'success',
         confirmButtonText: 'ACEPTAR'
       })
-    
 
     if (estaEnElCarrito(id)) {
         const producto = carrito.find(item => item.id === id);
@@ -121,6 +132,8 @@ const agregarProductoCarrito = (id) => {
     }
     guardarCarritoLS(carrito);
     renderBotonCarrito();
+
+    event.preventDefault();
 }
 
 const eliminarProductoCarrito = (id) => {
@@ -215,26 +228,19 @@ if (snippet.length) {
 }
 
 
-function agregarAlCarrito(productoId) {
-    fetch(`https://api.example.com/agregar-al-carrito`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ productoId: productoId }),
-    })
-      .then(response => response.json())
-      .then(resultado => {
-        // Actualizar el estado del carrito en la interfaz de usuario
-        actualizarEstadoDelCarrito(resultado);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
-  }
-  
-  function actualizarEstadoDelCarrito(carrito) {
-    // Lógica para mostrar el estado actualizado del carrito en la interfaz de usuario
+function TraerCotizacionDolar() {
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("https://api.bluelytics.com.ar/json/last_price", requestOptions)
+        .then(response => response.json())
+        .then(result => 
+        {
+            document.getElementById('cotiz').innerText = '$' + result[1].value_sell;        
+        })
+        .catch(error => console.log('error', error));
   }
   
 

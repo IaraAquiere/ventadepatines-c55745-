@@ -1,73 +1,78 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url('https://fonts.googleapis.com/css2?family=Imprima&family=Lato:ital,wght@1,300&display=swap');
 
-.footer{
-    grid-area: footer;
-    background-color:#254750 ;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-.redes{
-    list-style-type:none;
-      display:flex;
-      flex-direction:row;
-     justify-content: center;
-     align-items: center;
-         li{
-             margin:10px;
-             color:#fff5f5;
-             font-size: 1.5rem;
-        }
- }
-
-.footer__barra-contacto{
-     display:flex;
-     flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-     color:#ffffff;
-     margin:0px 30px;
-         ul{
-         margin-bottom: 0;
-        padding-left: 0;
-          }
- }
-
- .acomodar img{
-    width: 500px;
-    padding: 20px;
- }
- .acomodar div{
-    text-align: center;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-family: 'Imprima', sans-serif;
-    font-family: 'Lato', sans-serif;
- }
-.acomodar{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-evenly;
-    align-items: center
+.footer {
+  grid-area: footer;
+  background-color: #254750;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-body{
-    position: relative;
-    padding-bottom: 3em;
-    min-height: 100vh;
+.redes {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    margin: 10px;
+    color: #fff5f5;
+    font-size: 1.5rem;
+  }
 }
 
-h1{
-    text-align: center;
-    font-family: 'Imprima', sans-serif;
+.footer__barra-contacto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  margin: 0px 30px;
+
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+.acomodar img {
+  width: 500px;
+  padding: 20px;
+}
+
+.acomodar div {
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-family: 'Imprima', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+.acomodar {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center
+}
+
+body {
+  position: relative;
+  padding-bottom: 3em;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Imprima', sans-serif;
 }
 
 .snip1580 {
@@ -84,17 +89,21 @@ h1{
   text-align: left;
   font-size: 16px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  p
 }
+
 .snip1580 * {
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .snip1580 img {
   max-width: 100%;
   vertical-align: top;
 }
+
 .snip1580 figcaption {
   position: absolute;
   top: 0;
@@ -104,18 +113,21 @@ h1{
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.75);
 }
+
 .snip1580 h3 {
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
   margin: 3px 0;
 }
+
 .snip1580 h5 {
   font-weight: 400;
   margin: 0;
   color: #bbb;
   letter-spacing: 1px;
 }
+
 .snip1580 a {
   position: absolute;
   top: 0;
@@ -123,6 +135,7 @@ h1{
   left: 0;
   right: 0;
 }
+
 .snip1580:hover figcaption,
 .snip1580.hover figcaption {
   top: 20px;
@@ -131,6 +144,7 @@ h1{
   bottom: 20px;
   background-color: #fff;
 }
+
 .snip1580:hover h3,
 .snip1580.hover h3,
 .snip1580:hover h5,
@@ -138,7 +152,7 @@ h1{
   color: #333;
 }
 
-.main_historia p{
+.main_historia p {
   text-align: center;
   padding-left: 20%;
   padding-right: 20%;
@@ -146,23 +160,23 @@ h1{
   font-family: 'Lato', sans-serif;
 }
 
-.main_historia h2{
+.main_historia h2 {
   padding-left: 20%;
   font-family: 'Imprima', sans-serif;
 }
 
-.main_historia ul{
+.main_historia ul {
   padding-left: 20%;
   text-decoration: none;
   font-family: 'Imprima', sans-serif;
   font-family: 'Lato', sans-serif;
 }
 
-.main_historia div{
+.main_historia div {
   padding-left: 15%;
   padding-right: 15%;
 }
 
-.titulo_principal{
+.titulo_principal {
   padding-top: 8%;
 }
