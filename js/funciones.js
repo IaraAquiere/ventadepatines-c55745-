@@ -129,8 +129,14 @@ const eliminarProductoCarrito = (id) => {
     guardarCarritoLS(nuevoCarrito);
     renderCarrito();
     renderBotonCarrito();
+    Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Eliminaste un producto del carrito',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
-
 const incrementarCantidadProducto = (id) => {
     const carrito = cargarCarritoLS();
     const producto = carrito.find(item => item.id === id);
@@ -208,5 +214,28 @@ if (snippet.length) {
   });
 }
 
+
+function agregarAlCarrito(productoId) {
+    fetch(`https://api.example.com/agregar-al-carrito`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ productoId: productoId }),
+    })
+      .then(response => response.json())
+      .then(resultado => {
+        // Actualizar el estado del carrito en la interfaz de usuario
+        actualizarEstadoDelCarrito(resultado);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+  
+  function actualizarEstadoDelCarrito(carrito) {
+    // Lógica para mostrar el estado actualizado del carrito en la interfaz de usuario
+  }
+  
 
 
